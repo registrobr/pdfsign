@@ -84,9 +84,14 @@ func VerifyWithOptions(file io.ReaderAt, size int64, options *VerifyOptions) (ap
 	}
 
 	// Walk over the cross references in the document
-	for _, x := range rdr.Xref() {
+	for i := range rdr.Xref() {
 		// Get the xref object Value
-		v := rdr.Resolve(x.Ptr(), x.Ptr())
+		v, err := rdr.GetObject(uint32(i))
+
+		if err != nil {
+			// Skip this signature if there's a critical error
+			continue
+		}
 
 		// We must have a Filter Adobe.PPKLite
 		if v.Key("Filter").Name() != "Adobe.PPKLite" {
