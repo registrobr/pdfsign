@@ -94,7 +94,8 @@ func VerifyWithOptions(file io.ReaderAt, size int64, options *VerifyOptions) (ap
 		}
 
 		// We must have a Filter Adobe.PPKLite
-		if v.Key("Filter").Name() != "Adobe.PPKLite" {
+		if v.Key("Filter").Name() != "Adobe.PPKLite" &&
+			v.Key("Filter").Name() != "Adobe.PPKMS" {
 			continue
 		}
 
