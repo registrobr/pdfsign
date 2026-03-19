@@ -149,7 +149,6 @@ func TestFile(t *testing.T) {
 		t.Logf("  ModDate: %s", response.DocumentInfo.ModDate)
 	}
 
-	t.Errorf("laksdlçkasdl")
 }
 
 func TestReader(t *testing.T) {
