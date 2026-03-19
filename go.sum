@@ -7,8 +7,8 @@ github.com/digitorus/timestamp v0.0.0-20250524132541-c45532741eea h1:ALRwvjsSP53
 github.com/digitorus/timestamp v0.0.0-20250524132541-c45532741eea/go.mod h1:GvWntX9qiTlOud0WkQ6ewFm0LPy5JUR1Xo0Ngbd1w6Y=
 github.com/mattetti/filebuffer v1.0.1 h1:gG7pyfnSIZCxdoKq+cPa8T0hhYtD9NxCdI4D7PTjRLM=
 github.com/mattetti/filebuffer v1.0.1/go.mod h1:YdMURNDOttIiruleeVr6f56OrMc+MydEnTcXwtkxNVs=
-github.com/registrobr/pkcs7 v0.0.0-20260317173523-0e2a5ec36a59 h1:uPis/1iL8faWB9LyTYk1LDtxb0KwA1EhwLE4cdtNviw=
-github.com/registrobr/pkcs7 v0.0.0-20260317173523-0e2a5ec36a59/go.mod h1:d/Vy3bxNhUuXA4HWtO76bPHTzrw0srzlwAeh5a49VUE=
+github.com/registrobr/pkcs7 v0.0.0-20260319175213-cd51a793dd8e h1:jt9YSUvU7tBjvnc4E9ObiV8bU0UVdSC9/YW87UvXtEg=
+github.com/registrobr/pkcs7 v0.0.0-20260319175213-cd51a793dd8e/go.mod h1:d/Vy3bxNhUuXA4HWtO76bPHTzrw0srzlwAeh5a49VUE=
 golang.org/x/crypto v0.48.0 h1:/VRzVqiRSggnhY7gNRxPauEQ5Drw9haKdM0jqfcCFts=
 golang.org/x/crypto v0.48.0/go.mod h1:r0kV5h3qnFPlQnBSrULhlsRfryS2pmewsg+XfMgkVos=
 golang.org/x/text v0.34.0 h1:oL/Qq0Kdaqxa1KbNeMKwQq0reLCCaFtqu2eNuSeNHbk=

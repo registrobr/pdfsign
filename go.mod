@@ -12,5 +12,5 @@ require (
 
 require (
 	github.com/digitorus/pkcs7 v0.0.0-20250730155240-ffadbf3f398c // indirect
-	github.com/registrobr/pkcs7 v0.0.0-20260317173523-0e2a5ec36a59
+	github.com/registrobr/pkcs7 v0.0.0-20260319175213-cd51a793dd8e
 )
