@@ -10,7 +10,7 @@ github.com/digitorus/timestamp
 # github.com/mattetti/filebuffer v1.0.1
 ## explicit
 github.com/mattetti/filebuffer
-# github.com/registrobr/pkcs7 v0.0.0-20260317173523-0e2a5ec36a59
+# github.com/registrobr/pkcs7 v0.0.0-20260319175213-cd51a793dd8e
 ## explicit; go 1.19
 github.com/registrobr/pkcs7
 # golang.org/x/crypto v0.48.0
