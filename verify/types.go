@@ -77,6 +77,8 @@ type Signer struct {
 	VerificationTime   *time.Time           `json:"verification_time"`          // Time used for certificate validation
 	TimeSource         string               `json:"time_source"`                // "embedded_timestamp", "signature_time", "current_time"
 	TimeWarnings       []string             `json:"time_warnings,omitempty"`    // Warnings about time validation
+
+	DigestMethod string `json:"digest_method,omitempty"`
 }
 
 type Certificate struct {

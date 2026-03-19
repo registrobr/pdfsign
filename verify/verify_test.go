@@ -7,7 +7,7 @@ import (
 )
 
 func TestFile(t *testing.T) {
-	testFilePath := filepath.Join("..", "testfiles", "document_md5.pdf")
+	testFilePath := filepath.Join("..", "testfiles", "testfile30.pdf")
 
 	// Check if test file exists
 	if _, err := os.Stat(testFilePath); os.IsNotExist(err) {
@@ -95,6 +95,7 @@ func TestFile(t *testing.T) {
 		t.Logf("  TrustedIssuer: %t", signer.TrustedIssuer)
 		t.Logf("  RevokedCertificate: %t", signer.RevokedCertificate)
 		t.Logf("  Certificates count: %d", len(signer.Certificates))
+		t.Logf("  Digest method: %s", signer.DigestMethod)
 
 		// Check if we have certificates
 		if len(signer.Certificates) == 0 {
@@ -147,6 +148,8 @@ func TestFile(t *testing.T) {
 	if !response.DocumentInfo.ModDate.IsZero() {
 		t.Logf("  ModDate: %s", response.DocumentInfo.ModDate)
 	}
+
+	t.Errorf("laksdlçkasdl")
 }
 
 func TestReader(t *testing.T) {

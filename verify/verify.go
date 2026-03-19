@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io"
 	"os"
+	"slices"
 	"time"
 
 	"github.com/digitorus/pdf"
@@ -105,6 +106,13 @@ func VerifyWithOptions(file io.ReaderAt, size int64, options *VerifyOptions) (ap
 		if err != nil {
 			// Skip this signature if there's a critical error
 			continue
+		}
+
+		if signer.DigestMethod == "" {
+			subfilter := v.Key("SubFilter").Name()
+			if slices.Contains([]string{"adbe.pkcs7.sha1", "adbe.x509.rsa_sha1"}, subfilter) {
+				signer.DigestMethod = "SHA1"
+			}
 		}
 
 		// Set any error message if present

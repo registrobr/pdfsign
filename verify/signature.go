@@ -30,6 +30,8 @@ func processSignature(v pdf.Value, file io.ReaderAt, options *VerifyOptions) (Si
 		}
 	}
 
+	parseReference(v.Key("Reference"), &signer)
+
 	// Parse PKCS#7 signature
 	p7, err := pkcs7.Parse([]byte(v.Key("Contents").RawString()))
 	if err != nil {
@@ -144,4 +146,15 @@ func verifySignature(p7 *pkcs7.PKCS7, signer *Signer) error {
 	}
 
 	return nil
+}
+
+func parseReference(v pdf.Value, signer *Signer) {
+	for i := range v.Len() {
+		val := v.Index(i)
+
+		if val.Key("Type").Name() == "SigRef" {
+			signer.DigestMethod = val.Key("DigestMethod").Name()
+			break
+		}
+	}
 }
